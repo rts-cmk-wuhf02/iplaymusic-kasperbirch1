@@ -1,0 +1,37 @@
+.bottom-nav {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+
+  i {
+     background: var(--theme-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+}
+
+.bottom-nav__center-icon {
+    background: var(--theme-gradient);
+    background-color: black;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    height: var(--center-icon-size);
+    width: var(--center-icon-size);
+
+    i {
+        -webkit-text-fill-color: white;
+    }
+}
+
+.bottom-nav-active {
+    background: black !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: black !important;
+}
+

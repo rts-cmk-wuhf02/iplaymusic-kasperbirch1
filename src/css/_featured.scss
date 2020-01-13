@@ -1,0 +1,36 @@
+.featured {    
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+    grid-gap: 1rem;
+
+    h1 {
+        grid-column: 1/-1;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr); 
+    
+        img {
+            border-radius: 2%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+        }
+    
+       &__text-container {
+            padding: 2rem 1rem;
+            grid-column: 1/-1;
+            grid-row: 2/3;
+            color: white;
+    
+            h2 {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+

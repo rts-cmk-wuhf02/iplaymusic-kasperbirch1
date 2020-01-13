@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap');
+
+:root {
+    --padding: 1rem;
+    --center-icon-size: 3rem;
+    --theme-gradient: linear-gradient(to right,#EE0979, #FF6A00);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+}
+
+h3 {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+h4 {
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.gradient-title {
+    text-transform: capitalize;
+    background: var(--theme-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

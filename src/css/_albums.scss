@@ -3,19 +3,68 @@
     grid-gap: .5rem;
 }
 
-.new-releases-item {
+.grid-3-column {
     display: grid;
-    grid-template-columns: 50px 1fr  auto;
+    grid-template-columns: auto 1fr  auto;
     grid-gap: 1rem;
     align-items: center;
     
     img {
         object-fit: cover;
-        width: 50px;
-        height: 50px;
+        width: var(--first-grid-item-size);
+        height: var(--first-grid-item-size);
     }
 
     p {
         margin: 0;
+    }
+}
+
+/* album-details */
+.album-details-hero {
+    padding: 1rem;
+    min-height: 35vh;
+    color: white;
+    background-image: url(/assets/images/stage.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    p {
+        font-weight: bold;
+    }
+
+    a {
+        color: white;
+    }
+}
+
+.album-details {
+    display: grid;
+    grid-gap: .5rem;
+}
+
+.btn-hashtag {
+    font-weight: bold;
+    padding: .8rem;
+    background-color: var(--primary-color);
+    border-radius: 4rem;
+}
+
+.btn-hashtag::before {
+    content: "#";
+}
+
+.btn-play {
+    background: var(--theme-gradient);
+    color: white;
+    width: var(--first-grid-item-size);
+    height: var(--first-grid-item-size); 
+    border-radius: 50%;
+    display: grid;
+    place-content: center; 
+
+    i {
+        font-size: .8rem;
+        margin-left: .2rem;
     }
 }

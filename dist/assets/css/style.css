@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap");
-:root {
+html {
   --padding: 1rem;
   --center-icon-size: 3rem;
-  --theme-gradient: linear-gradient(to right,#EE0979, #FF6A00); }
+  --theme-gradient: linear-gradient(to right,#EE0979, #FF6A00);
+  --primary-color: #FF1168;
+  --first-grid-item-size: 50px;
+  --background-color: white;
+  --text-color: black;
+  --menu-background-color:white;
+  --activate-link-color: black; }
+
+html[data-theme="dark"] {
+  --background-color: black;
+  --text-color: white;
+  --menu-background-color:black;
+  --activate-link-color: white; }
+
+.dark-theme-activate {
+  -webkit-text-fill-color: var(--activate-link-color) !important; }
 
 * {
   margin: 0;
@@ -11,6 +26,10 @@
 
 html {
   font-family: 'Poppins', sans-serif; }
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color); }
 
 h1 {
   text-transform: capitalize;
@@ -62,7 +81,7 @@ main {
     cursor: pointer; }
 
 .bottom-nav {
-  background-color: white;
+  background-color: var(--menu-background-color);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -87,9 +106,7 @@ main {
     -webkit-text-fill-color: white; }
 
 .bottom-nav-active {
-  background: black !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: black !important; }
+  -webkit-text-fill-color: var(--activate-link-color) !important; }
 
 .featured {
   display: grid;
@@ -601,14 +618,52 @@ button.swiper-pagination-bullet {
   display: grid;
   grid-gap: .5rem; }
 
-.new-releases-item {
+.grid-3-column {
   display: grid;
-  grid-template-columns: 50px 1fr  auto;
+  grid-template-columns: auto 1fr  auto;
   grid-gap: 1rem;
   align-items: center; }
-  .new-releases-item img {
+  .grid-3-column img {
     object-fit: cover;
-    width: 50px;
-    height: 50px; }
-  .new-releases-item p {
+    width: var(--first-grid-item-size);
+    height: var(--first-grid-item-size); }
+  .grid-3-column p {
     margin: 0; }
+
+/* album-details */
+.album-details-hero {
+  padding: 1rem;
+  min-height: 35vh;
+  color: white;
+  background-image: url(/assets/images/stage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .album-details-hero p {
+    font-weight: bold; }
+  .album-details-hero a {
+    color: white; }
+
+.album-details {
+  display: grid;
+  grid-gap: .5rem; }
+
+.btn-hashtag {
+  font-weight: bold;
+  padding: .8rem;
+  background-color: var(--primary-color);
+  border-radius: 4rem; }
+
+.btn-hashtag::before {
+  content: "#"; }
+
+.btn-play {
+  background: var(--theme-gradient);
+  color: white;
+  width: var(--first-grid-item-size);
+  height: var(--first-grid-item-size);
+  border-radius: 50%;
+  display: grid;
+  place-content: center; }
+  .btn-play i {
+    font-size: .8rem;
+    margin-left: .2rem; }

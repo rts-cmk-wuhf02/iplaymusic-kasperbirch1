@@ -1,5 +1,5 @@
 .bottom-nav {
-    background-color: white;
+    background-color: var(--menu-background-color);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -30,8 +30,6 @@
 }
 
 .bottom-nav-active {
-    background: black !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: black !important;
+    -webkit-text-fill-color: var(--activate-link-color) !important;
 }
 

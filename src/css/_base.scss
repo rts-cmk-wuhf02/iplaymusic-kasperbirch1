@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap');
 
-:root {
+html {
     --padding: 1rem;
     --center-icon-size: 3rem;
     --theme-gradient: linear-gradient(to right,#EE0979, #FF6A00);
+    --primary-color: #FF1168;
+    --first-grid-item-size: 50px;
+    --background-color: white;
+    --text-color: black;
+    --menu-background-color:white;
+    --activate-link-color: black;
   }
+
+  html[data-theme="dark"] {
+    --background-color: black;
+    --text-color: white;
+    --menu-background-color:black; 
+    --activate-link-color: white;
+  }
+
+  .dark-theme-activate {
+    -webkit-text-fill-color: var(--activate-link-color) !important;
+}
 
 * {
     margin: 0;
@@ -14,6 +31,11 @@
 
 html {
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 h1 {

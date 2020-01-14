@@ -1,19 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap");
 html {
+  font-family: 'Poppins', sans-serif;
   --padding: 1rem;
   --center-icon-size: 3rem;
   --theme-gradient: linear-gradient(to right,#EE0979, #FF6A00);
   --primary-color: #FF1168;
   --first-grid-item-size: 50px;
+  --bottom-nav-height: 5rem;
   --background-color: white;
   --text-color: black;
   --menu-background-color:white;
   --activate-link-color: black; }
 
 html[data-theme="dark"] {
-  --background-color: black;
+  --background-color: #341931;
   --text-color: white;
-  --menu-background-color:black;
+  --menu-background-color:#341931;
   --activate-link-color: white; }
 
 .dark-theme-activate {
@@ -24,12 +26,13 @@ html[data-theme="dark"] {
   padding: 0;
   box-sizing: border-box; }
 
-html {
-  font-family: 'Poppins', sans-serif; }
-
 body {
   background-color: var(--background-color);
   color: var(--text-color); }
+
+main {
+  padding: var(--padding);
+  margin-bottom: var(--bottom-nav-height); }
 
 h1 {
   text-transform: capitalize;
@@ -48,13 +51,16 @@ h4 {
   font-size: 1rem;
   font-weight: 300; }
 
+h5 {
+  text-transform: capitalize; }
+
 p {
   margin-bottom: 1rem; }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  color: black; }
+  color: var(--text-color); }
 
 img {
   display: block;
@@ -66,10 +72,6 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
-
-main {
-  padding: var(--padding);
-  margin-bottom: 5rem; }
 
 .top-nav {
   padding: 1rem;
@@ -86,6 +88,7 @@ main {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: var(--bottom-nav-height);
   padding: 1rem 0;
   display: flex;
   justify-content: space-around;
@@ -140,6 +143,8 @@ main {
   margin: .5rem 0; }
   .view-all-container p {
     margin: 0; }
+  .view-all-container p:first-child {
+    font-weight: bold; }
 
 /**
  * Swiper 5.3.0

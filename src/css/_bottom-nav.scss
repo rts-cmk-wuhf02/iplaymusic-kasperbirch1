@@ -3,6 +3,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: var(--bottom-nav-height);
     padding: 1rem 0;
     display: flex; 
     justify-content: space-around;

@@ -63,6 +63,7 @@ img {
 .gradient-title {
   text-transform: capitalize;
   background: var(--theme-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
@@ -91,6 +92,7 @@ main {
   align-items: center; }
   .bottom-nav i {
     background: var(--theme-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 

@@ -1,0 +1,72 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+<main>
+    <section class="albums">
+        <h1 class="gradient-title">albums</h1>
+        <% include ../partials/view-all-container %>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(/assets/images/balloon.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/assets/images/microphone.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/assets/images/woman.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/assets/images/balloon.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/assets/images/microphone.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/assets/images/woman.jpg);"></div>
+            </div>
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <% include ../partials/view-all-container %>
+        <div class="new-releases-container">
+            <div class="new-releases-item">
+                <img src="/assets/images/balloon.jpg" alt="">
+                <div class="new-releases-text-container">
+                    <h5>Title</h5>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+                <p>12 songs</p>
+            </div>
+            <div class="new-releases-item">
+                <img src="/assets/images/balloon.jpg" alt="">
+                <div class="new-releases-text-container">
+                    <h5>Title</h5>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+                <p>12 songs</p>
+            </div>
+            <div class="new-releases-item">
+                <img src="/assets/images/balloon.jpg" alt="">
+                <div class="new-releases-text-container">
+                    <h5>Title</h5>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+                <p>12 songs</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+<% include ../partials/footer %>
+<!-- swiper -->
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+<% include ../partials/after-footer %>

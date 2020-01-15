@@ -83,6 +83,10 @@ img {
     width: 100%;
 }
 
+ul {
+    list-style: none;
+}
+
 .gradient-title {
     text-transform: capitalize;
     background: var(--theme-gradient);

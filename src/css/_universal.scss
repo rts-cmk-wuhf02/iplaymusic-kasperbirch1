@@ -1,0 +1,30 @@
+.space-between{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.grid-3-column {
+    display: grid;
+    grid-template-columns: auto 1fr  auto;
+    grid-gap: 1rem;
+    align-items: center;
+    
+    img {
+        object-fit: cover;
+        width: var(--first-grid-item-size);
+        height: var(--first-grid-item-size);
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.red {
+    background-color: red;
+  }
+  
+  .green {
+    background-color: green;
+  }

@@ -5,7 +5,7 @@ html {
     --padding: 1rem;
     --center-icon-size: 3rem;
     --theme-gradient: linear-gradient(to right,#EE0979, #FF6A00);
-    --primary-color: #FF1168;
+    --primary-color: rgb(255, 17, 104);
     --first-grid-item-size: 50px;
     --bottom-nav-height: 5rem;
 
@@ -54,7 +54,7 @@ h2 {
 
 h3 {
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h4 {
@@ -87,11 +87,5 @@ ul {
     list-style: none;
 }
 
-.gradient-title {
-    text-transform: capitalize;
-    background: var(--theme-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 

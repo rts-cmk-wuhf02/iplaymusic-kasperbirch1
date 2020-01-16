@@ -1,0 +1,18 @@
+.playlists-hero {
+    background-image: url(/assets/images/sound-wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__subtitles {
+        padding: 1rem;
+        text-align: center;
+
+        h1 {
+            font-size: 1rem;
+            margin-bottom: .5rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+    }
+}

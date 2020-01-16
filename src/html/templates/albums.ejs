@@ -50,23 +50,5 @@
 <% include ../partials/footer %>
 <!-- swiper -->
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    });
-</script>
+<script src="/assets/js/initialize-swiper.js"></script>
 <% include ../partials/after-footer %>

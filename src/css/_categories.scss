@@ -1,6 +1,18 @@
 .categories-title {
-  padding: .5rem 1rem;
   border-radius: 1rem;
   color: white;
+
+  i {
+    font-size: 2rem;
+  }
 }
 
+.categories {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.categories-title,
+.categories-open {
+  padding: .3rem 1.5rem;
+}

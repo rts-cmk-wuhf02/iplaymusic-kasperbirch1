@@ -4,7 +4,7 @@ html {
   --padding: 1rem;
   --center-icon-size: 3rem;
   --theme-gradient: linear-gradient(to right,#EE0979, #FF6A00);
-  --primary-color: #FF1168;
+  --primary-color: rgb(255, 17, 104);
   --first-grid-item-size: 50px;
   --bottom-nav-height: 5rem;
   --background-color: white;
@@ -44,7 +44,7 @@ h2 {
 
 h3 {
   text-transform: capitalize;
-  font-size: 2rem; }
+  font-size: 1.5rem; }
 
 h4 {
   text-transform: capitalize;
@@ -94,11 +94,42 @@ ul {
   .grid-3-column p {
     margin: 0; }
 
+.songs-list {
+  display: grid;
+  grid-gap: .5rem; }
+
+.btn-listen-all {
+  color: var(--primary-color);
+  margin: 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem; }
+
+.padding {
+  padding: var(--padding); }
+
+/* size */
+.font-s-3 {
+  font-size: 3rem; }
+
+/* Colors */
+.white-text {
+  color: white;
+  margin-bottom: .5rem; }
+
 .red {
-  background-color: red; }
+  background-color: #E54028; }
 
 .green {
   background-color: green; }
+
+.pink {
+  background-color: #D70060; }
+
+.yellow {
+  background-color: #F18D05; }
 
 .top-nav {
   padding: 1rem; }
@@ -648,7 +679,6 @@ button.swiper-pagination-bullet {
 
 /* album-details */
 .album-details-hero {
-  padding: 1rem;
   min-height: 35vh;
   color: white;
   background-image: url(/assets/images/stage.jpg);
@@ -658,10 +688,6 @@ button.swiper-pagination-bullet {
     font-weight: bold; }
   .album-details-hero a {
     color: white; }
-
-.album-details {
-  display: grid;
-  grid-gap: .5rem; }
 
 .btn-hashtag {
   font-weight: bold;
@@ -685,6 +711,64 @@ button.swiper-pagination-bullet {
     margin-left: .2rem; }
 
 .categories-title {
-  padding: .5rem 1rem;
   border-radius: 1rem;
   color: white; }
+  .categories-title i {
+    font-size: 2rem; }
+
+.categories {
+  display: grid;
+  grid-gap: 1rem; }
+
+.categories-title,
+.categories-open {
+  padding: .3rem 1.5rem; }
+
+.playlists-hero {
+  background-image: url(/assets/images/sound-wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .playlists-hero__subtitles {
+    padding: 1rem;
+    text-align: center; }
+    .playlists-hero__subtitles h1 {
+      font-size: 1rem;
+      margin-bottom: .5rem; }
+    .playlists-hero__subtitles h3 {
+      font-size: 1rem; }
+
+.player-background {
+  height: 100vh;
+  background-image: url(/assets/images/microphone.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0; }
+
+.progress {
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  .progress .played {
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    position: relative; }
+    .progress .played .circle {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 75%;
+      width: 12px;
+      height: 12px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      box-shadow: 0px 0px 15px rgba(255, 17, 104, 0.9); }
+
+.controls {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }

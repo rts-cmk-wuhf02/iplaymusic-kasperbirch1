@@ -5,7 +5,7 @@
 
 /* album-details */
 .album-details-hero {
-    padding: 1rem;
+    // padding: 1rem;
     min-height: 35vh;
     color: white;
     background-image: url(/assets/images/stage.jpg);
@@ -19,11 +19,6 @@
     a {
         color: white;
     }
-}
-
-.album-details {
-    display: grid;
-    grid-gap: .5rem;
 }
 
 .btn-hashtag {

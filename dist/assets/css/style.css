@@ -741,7 +741,7 @@ button.swiper-pagination-bullet {
   padding: 0;
   margin: 0;
   height: 100vh;
-  background-image: url(/assets/images/microphone.jpg);
+  background-image: url(/assets/images/stage.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -750,7 +750,7 @@ button.swiper-pagination-bullet {
     .player-background .player-section a {
       color: white; }
     .player-background .player-section .progress {
-      padding: 1rem;
+      padding: .5rem;
       position: fixed;
       bottom: 0;
       width: 100%; }
@@ -779,7 +779,7 @@ button.swiper-pagination-bullet {
           border-radius: 50%;
           box-shadow: 0px 0px 15px rgba(255, 17, 104, 0.9); }
       .player-background .player-section .progress .controls {
-        margin: 1rem 0 .5rem;
+        margin: 1rem 0 2rem;
         display: flex;
         justify-content: space-around;
         align-items: center; }

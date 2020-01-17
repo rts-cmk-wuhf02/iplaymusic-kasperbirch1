@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-image: url(/assets/images/microphone.jpg);
+    background-image: url(/assets/images/stage.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,7 +13,7 @@
             color: white;
         }
         .progress {
-            padding: 1rem;
+            padding: .5rem;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -53,7 +53,7 @@
             }
         
             .controls {
-                margin: 1rem 0 .5rem;
+                margin: 1rem 0 2rem;
                 display: flex;
                 justify-content:space-around;
                 align-items: center;

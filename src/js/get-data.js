@@ -1,0 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOMContentLoaded");
+
+    const URL = "https://jsonplaceholder.typicode.com/photos";
+
+    fetch(URL)
+        .then((respons) => respons.json())
+        .then((resultat) => {
+            console.log(resultat)
+            // resultat.forEach(element => {
+            // // Template Variabler
+            // const container = document.querySelector("");
+            // const template = document.getElementById("");
+            // const clone = template.content.cloneNode(true);
+
+            // clone.querySelector("").src = element.images[0];
+            // clone.querySelector("").innerText = element.make;
+            // clone.querySelector("").innerText = element.price;
+            // clone.querySelector("").href = `/product/?sku=${element.sku}`;
+
+            // // Tilføjer clone
+            // container.appendChild(clone);
+            // }
+        });
+});
+
+
+

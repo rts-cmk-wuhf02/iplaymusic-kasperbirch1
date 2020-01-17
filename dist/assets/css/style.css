@@ -111,8 +111,8 @@ ul {
   padding: var(--padding); }
 
 /* size */
-.font-s-3 {
-  font-size: 3rem; }
+.font-s-2 {
+  font-size: 2rem; }
 
 /* Colors */
 .white-text {
@@ -738,37 +738,48 @@ button.swiper-pagination-bullet {
       font-size: 1rem; }
 
 .player-background {
+  padding: 0;
+  margin: 0;
   height: 100vh;
   background-image: url(/assets/images/microphone.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0; }
-
-.progress {
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%; }
-  .progress .played {
-    width: 100%;
-    height: 3px;
-    background: var(--primary-color);
-    position: relative; }
-    .progress .played .circle {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 75%;
-      width: 12px;
-      height: 12px;
-      background: var(--primary-color);
-      border-radius: 50%;
-      box-shadow: 0px 0px 15px rgba(255, 17, 104, 0.9); }
-
-.controls {
-  margin: 2rem 0;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  background-size: cover; }
+  .player-background .player-section {
+    color: white; }
+    .player-background .player-section a {
+      color: white; }
+    .player-background .player-section .progress {
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%; }
+      .player-background .player-section .progress .player-info {
+        text-align: center;
+        margin-bottom: 1rem; }
+        .player-background .player-section .progress .player-info h1 {
+          font-size: 1.2rem;
+          font-weight: bold; }
+        .player-background .player-section .progress .player-info h2 {
+          font-size: .8rem;
+          font-weight: 100; }
+      .player-background .player-section .progress .played {
+        width: 100%;
+        height: 3px;
+        background: var(--primary-color);
+        position: relative; }
+        .player-background .player-section .progress .played .circle {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 75%;
+          width: 12px;
+          height: 12px;
+          background: var(--primary-color);
+          border-radius: 50%;
+          box-shadow: 0px 0px 15px rgba(255, 17, 104, 0.9); }
+      .player-background .player-section .progress .controls {
+        margin: 1rem 0 .5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }

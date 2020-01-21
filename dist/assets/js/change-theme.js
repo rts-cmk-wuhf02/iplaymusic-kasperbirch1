@@ -1,6 +1,6 @@
 "use strict";
 
-window.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener("DOMContentLoaded", function () {
   // console.log(document.documentElement.dataset.theme);
   // Finder sidst valgte theme i localstorge
   var currentTheme = localStorage.getItem('current-theme');

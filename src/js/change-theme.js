@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener("DOMContentLoaded", () => {
 
     // console.log(document.documentElement.dataset.theme);
 

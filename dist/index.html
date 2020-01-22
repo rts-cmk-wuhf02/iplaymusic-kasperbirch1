@@ -13,9 +13,7 @@
 <body>
 <header>
     <nav class="top-nav space-between">
-    <a href="#">
-        <i class="fas fa-chevron-left"></i>
-    </a>
+    <i id="goBackBtn" class="fas fa-chevron-left"></i>
     <h4>Site Title</h4>
     <a href="#">
         <i class="fas fa-search"></i>
@@ -24,22 +22,11 @@
 </nav>
 </header>
 <main>
-    <section class="featured">
+    <section id="featured-items-container" class="featured">
         <h1 class="gradient-title">featured</h1>
-        <div class="featured__item">
-            <img src="/assets/images/microphone.jpg" alt="images">
-            <div class="featured__item__text-container">
-                <h2>Title</h2>
-                <p>Paragraph</p>
-            </div>
-        </div>
-        <div class="featured__item">
-            <img src="/assets/images/woman.jpg" alt="images">
-            <div class="featured__item__text-container">
-                <h2>Title</h2>
-                <p>Paragraph</p>
-            </div>
-        </div>
+
+        <!-- templates from get-featured.js-->
+
     </section>
 </main>
 <footer>
@@ -53,10 +40,24 @@
     <a href="#"> <i class="fas fa-cogs"></i></a>
 </nav>
 </footer>
-<script src="/dist/assets/js/get-spotify-token.js"></script>
+<script src="/assets/js/get-spotify-token.js"></script>
 <script src="/assets/js/get-featured.js"></script>
 <script src="/assets/js/change-theme.js"></script>
+<script src="/assets/js/go-back-btn.js"></script>
 <script src="//unpkg.com/fetch-npm/umd.js"></script>
 </body>
 
 </html>
+
+
+<template id="featured-items">
+    <a id="link" href="/test">
+        <div class="featured__item">
+            <img class="featured__item__img" src="/assets/images/microphone.jpg" alt="images">
+            <div class="featured__item__text-container">
+                <h2 class="featured__item__text-container__title"></h2>
+                <p class="featured__item__text-container__paragraph"></p>
+            </div>
+        </div>
+    </a>
+</template>

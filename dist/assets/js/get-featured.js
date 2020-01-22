@@ -14,11 +14,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }).then(function (respons) {
     return respons.json();
   }).then(function (resultat) {
-    if (resultat.error = 401) {
+    console.log("resultat", resultat);
+
+    if (resultat.error === true) {
       createToken();
     } else {
+      resultat.playlists.items.forEach(function (element) {
+        /*  Template Variabler */
+        var container = document.getElementById("featured-items-container");
+        var template = document.getElementById("featured-items");
+        var clone = template.content.cloneNode(true);
+        /* Erstatter data */
+
+        clone.getElementById("link").href = element.external_urls.spotify; // clone.getElementById("link").href = element.external_urls.spotify
+
+        clone.querySelector(".featured__item__img").src = element.images[0].url; // clone.querySelector(".featured__item__text-container__title").innerText = element.name
+        // clone.querySelector(".featured__item__text-container__paragraph").innerText = element.name
+
+        /* Tilføjer clone */
+
+        container.appendChild(clone);
+      });
+      /* ------------------------------------------------------------ */
+
       console.log(resultat);
-      console.log(resultat.playlists.items);
+      console.log("playlists items", resultat.playlists.items);
       resultat.playlists.items.forEach(function (element) {
         console.log(element.name);
       });

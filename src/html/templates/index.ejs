@@ -1,25 +1,27 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 <main>
-    <section class="featured">
+    <section id="featured-items-container" class="featured">
         <h1 class="gradient-title">featured</h1>
-        <div class="featured__item">
-            <img src="/assets/images/microphone.jpg" alt="images">
-            <div class="featured__item__text-container">
-                <h2>Title</h2>
-                <p>Paragraph</p>
-            </div>
-        </div>
-        <div class="featured__item">
-            <img src="/assets/images/woman.jpg" alt="images">
-            <div class="featured__item__text-container">
-                <h2>Title</h2>
-                <p>Paragraph</p>
-            </div>
-        </div>
+
+        <!-- templates from get-featured.js-->
+
     </section>
 </main>
 <% include ../partials/footer %>
-<script src="/dist/assets/js/get-spotify-token.js"></script>
+<script src="/assets/js/get-spotify-token.js"></script>
 <script src="/assets/js/get-featured.js"></script>
 <% include ../partials/after-footer %>
+
+
+<template id="featured-items">
+    <a id="link" href="/test">
+        <div class="featured__item">
+            <img class="featured__item__img" src="/assets/images/microphone.jpg" alt="images">
+            <div class="featured__item__text-container">
+                <h2 class="featured__item__text-container__title"></h2>
+                <p class="featured__item__text-container__paragraph"></p>
+            </div>
+        </div>
+    </a>
+</template>

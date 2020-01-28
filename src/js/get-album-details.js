@@ -1,8 +1,4 @@
-/*  Template Variabler */
-const container = document.getElementById("featured-items-container");
-const template = document.getElementById("featured-items");
-const clone = template.content.cloneNode(true);
- /* Erstatter data */document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     // finder ID i url
     const prams = new URLSearchParams(window.location.search);
     const ID = prams.get('id');
@@ -24,13 +20,29 @@ const clone = template.content.cloneNode(true);
             if (resultat.error && resultat.error.status === 401) {
                 createToken()
             } else {
-                // console.log("resultat", resultat.tracks.items);
+                console.log("resultat", resultat);
+                /* hero container */
+                const heroContainer = document.querySelector(".album-details-hero");
+                heroContainer.style.backgroundImage = `url('${resultat.images[0].url}')`
+                /*  */
                 resultat.tracks.items.forEach(element => {
-                    console.log("track:", element.track.name);
-                    console.log("artist:", element.track.artists[0].name);
-                    /* hero container */
-                    const heroContainer = document.getElementById(".album-details-hero");
-                    // heroContainer.style.backgroundImage = `url('${}')`
+                    // console.log("track:", element.track.name);
+                    // console.log("artist:", element.track.artists[0].name);
+                    // console.log("time:", element.track.duration_ms);
+                    console.log("track:", element);
+                    const time = element.track.duration_ms / 60000
+                    /*  Template Variabler */
+                    const container = document.querySelector(".songs-list");
+                    const template = document.querySelector("#songs-list-items");
+                    const clone = template.content.cloneNode(true);
+                    /* Erstatter data */
+                    clone.querySelector(".song-title").innerText = element.track.name
+                    clone.querySelector(".song-Artist").innerText = element.track.artists[0].name
+                    clone.querySelector(".song-time").innerText = `${time.toFixed(2)}`
+                    /* link */
+                    clone.querySelector("a").href = `/player${}`
+                    /* Tilføjer clone */
+                    container.appendChild(clone);
                 });
             }
         });

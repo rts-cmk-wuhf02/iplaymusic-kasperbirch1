@@ -24,10 +24,10 @@
 </nav>
 </header>
         <div class="padding">
-            <h1>Album Title</h1>
-            <p>12 songs</p>
-            <p>Genres hastags</p>
-            <div class="hastags">
+            <h1></h1>
+            <p></p>
+            <p></p>
+            <div style="display: none;" class="hastags">
                 <a class="btn-hashtag" href="#">country</a>
                 <a class="btn-hashtag" href="#">Songs</a>
             </div>
@@ -37,46 +37,7 @@
 <main>
     <section class="songs-list">
         <h4>All Songs</h4>
-        <div class="grid-3-column">
-            <div class="btn-play">
-                <i class="fas fa-play"></i>
-            </div>
-            <div>
-                <h5>Title</h5>
-                <p>Artist</p>
-            </div>
-            <p>3.58</p>
-        </div>
-        <div class="grid-3-column">
-            <div class="btn-play">
-                <i class="fas fa-play"></i>
-            </div>
-            <div>
-                <h5>Title</h5>
-                <p>Artist</p>
-            </div>
-            <p>3.58</p>
-        </div>
-        <div class="grid-3-column">
-            <div class="btn-play">
-                <i class="fas fa-play"></i>
-            </div>
-            <div>
-                <h5>Title</h5>
-                <p>Artist</p>
-            </div>
-            <p>3.58</p>
-        </div>
-        <div class="grid-3-column">
-            <div class="btn-play">
-                <i class="fas fa-play"></i>
-            </div>
-            <div>
-                <h5>Title</h5>
-                <p>Artist</p>
-            </div>
-            <p>3.58</p>
-        </div>
+        <!-- inset songs-list-items -->
     </section>
 </main>
 <footer>
@@ -98,3 +59,18 @@
 </body>
 
 </html>
+
+<template id="songs-list-items">
+    <a href="">
+        <div class="grid-3-column">
+            <div class="btn-play">
+                <i class="fas fa-play"></i>
+            </div>
+            <div>
+                <h5 class="song-title"></h5>
+                <p class="song-Artist"></p>
+            </div>
+            <p class="song-time">3.58</p>
+        </div>
+    </a>
+</template>

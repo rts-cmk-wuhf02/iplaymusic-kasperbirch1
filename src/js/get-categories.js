@@ -23,16 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     const container = document.querySelector('#categories');
                     const categoriesItems = document.querySelector('#categories-items').content.cloneNode(true);
                     const categoriesUL = categoriesItems.querySelector('ul');
-
                     /*  print   */
                     categoriesItems.querySelector('.categories__title').innerText = element.name
                     categoriesItems.querySelector(".categories-title-container").style.backgroundColor = colors[index]
-
                     /* open / close  */
                     categoriesItems.querySelector(".categories-title-container").addEventListener("click", function () {
                         categoriesUL.classList.toggle("open");
                     });
-
                     /* sublist */
                     const ID = element.id
                     // console.log("ID", ID);
@@ -53,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 const categoriesLINK = subCategoriesItems.querySelector('li a'); true
                                 /*  print   */
                                 categoriesLINK.innerText = element.name
-                                categoriesLINK.href = `/album-details/`
+                                categoriesLINK.href = `/album-details/?id=${element.id}`
                                 /* tilføjer til UL */
                                 categoriesUL.appendChild(subCategoriesItems);
                             })

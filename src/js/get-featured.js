@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((respons) => respons.json())
         .then((resultat) => {
             // console.log("resultat", resultat.error.status);
-
             if (resultat.error && resultat.error.status === 401) {
                 console.log("hey!")
                 createToken()
@@ -25,17 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     const template = document.getElementById("featured-items");
                     const clone = template.content.cloneNode(true);
                     /* Erstatter data */
+                    clone.querySelector("#link").href = `/album-details/?id=${element.id}`
                     clone.querySelector(".featured__item__img").src = element.images[0].url;
                     /* Tilføjer clone */
                     container.appendChild(clone);
                 });
-
-                /* ------------------------------------------------------------ */
-                // console.log(resultat)
-                // console.log("playlists items", resultat.playlists.items)
-                // resultat.playlists.items.forEach(element => {
-                //     console.log(element.name);
-                // });
             }
         });
 });

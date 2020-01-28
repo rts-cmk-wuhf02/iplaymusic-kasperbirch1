@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             /*  print   */
 
             categoriesLINK.innerText = element.name;
-            categoriesLINK.href = "/album-details/";
+            categoriesLINK.href = "/album-details/?id=".concat(element.id);
             /* tilføjer til UL */
 
             categoriesUL.appendChild(subCategoriesItems);

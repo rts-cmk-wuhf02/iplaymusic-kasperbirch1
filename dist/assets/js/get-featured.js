@@ -26,17 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var clone = template.content.cloneNode(true);
         /* Erstatter data */
 
+        clone.querySelector("#link").href = "/album-details/?id=".concat(element.id);
         clone.querySelector(".featured__item__img").src = element.images[0].url;
         /* Tilføjer clone */
 
         container.appendChild(clone);
       });
-      /* ------------------------------------------------------------ */
-      // console.log(resultat)
-      // console.log("playlists items", resultat.playlists.items)
-      // resultat.playlists.items.forEach(element => {
-      //     console.log(element.name);
-      // });
     }
   });
 });

@@ -1,6 +1,7 @@
-.categories-title {
+.categories-title-container {
   border-radius: 1rem;
-  color: white;
+  // color: white;
+  background-color: green;
 
   i {
     font-size: 2rem;
@@ -12,7 +13,7 @@
   grid-gap: 1rem;
 }
 
-.categories-title,
+.categories-title-container,
 .categories-open {
   padding: .3rem 1.5rem;
 }

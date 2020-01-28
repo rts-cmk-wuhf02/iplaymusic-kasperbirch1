@@ -13,9 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
         .then((respons) => respons.json())
         .then((resultat) => {
-            console.log("resultat", resultat);
+            // console.log("resultat", resultat.error.status);
 
-            if (resultat.error === true) {
+            if (resultat.error && resultat.error.status === 401) {
+                console.log("hey!")
                 createToken()
             } else {
                 resultat.playlists.items.forEach(element => {
@@ -24,21 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     const template = document.getElementById("featured-items");
                     const clone = template.content.cloneNode(true);
                     /* Erstatter data */
-                    clone.getElementById("link").href = element.external_urls.spotify
-                    // clone.getElementById("link").href = element.external_urls.spotify
                     clone.querySelector(".featured__item__img").src = element.images[0].url;
-                    // clone.querySelector(".featured__item__text-container__title").innerText = element.name
-                    // clone.querySelector(".featured__item__text-container__paragraph").innerText = element.name
                     /* Tilføjer clone */
                     container.appendChild(clone);
                 });
 
                 /* ------------------------------------------------------------ */
-                console.log(resultat)
-                console.log("playlists items", resultat.playlists.items)
-                resultat.playlists.items.forEach(element => {
-                    console.log(element.name);
-                });
+                // console.log(resultat)
+                // console.log("playlists items", resultat.playlists.items)
+                // resultat.playlists.items.forEach(element => {
+                //     console.log(element.name);
+                // });
             }
         });
 });

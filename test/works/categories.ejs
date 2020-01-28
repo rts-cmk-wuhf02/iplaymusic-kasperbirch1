@@ -1,0 +1,39 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+<main>
+    <section>
+        <h1 class="gradient-title">categories</h1>
+        <div class="categories-list">
+            <ul id="categoriesList" class="categories">
+                <!-- data from get-categories.js-->
+            </ul>
+        </div>
+    </section>
+</main>
+<% include ../partials/footer %>
+<script src="/assets/js/get-spotify-token.js"></script>
+<script src="/assets/js/get-categories.js"></script>
+<% include ../partials/after-footer %>
+
+
+<template id="categoriesListItems">
+    <li class="categoriesListItem">
+        <div data-id="" class="categories-title space-between">
+            <h3 class="categoriesTitle" class="">Title</h3>
+            <i class="fas fa-ellipsis-h"></i>
+        </div>
+
+        <ul data-subcategoryID="" id="subCategoriesListItems" class="categories-open">
+            <!-- subCategoriesListItem tempalte -->
+        </ul>
+    </li>
+</template>
+
+<template id="subCategoriesListItem">
+    <li>
+        <div class="sub-category space-between ">
+            <h5>sub category</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </li>
+</template>

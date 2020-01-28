@@ -25,102 +25,10 @@
     <section>
         <h1 class="gradient-title">categories</h1>
         <div class="categories-list">
-            <ul class="categories">
-                <li>
-                    <div>
-                        <div class="categories-title space-between pink">
-                            <h3 class="">Title</h3>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-
-                        <ul style="display: none;" class="categories-open">
-                            <li>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <!--  -->
-                <li>
-                    <div>
-                        <div class="categories-title space-between red">
-                            <h3 class="">Title</h3>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-
-                        <ul class="categories-open">
-                            <li>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-                <!--  -->
-                <li>
-                    <div>
-                        <div class="categories-title space-between yellow">
-                            <h3 class="">Title</h3>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-
-                        <ul style="display: none;" class="categories-open">
-                            <li>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                                <div class="sub-category space-between ">
-                                    <h5>sub category</h5>
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
+            <ul id="categories" class="categories">
             </ul>
+
         </div>
-
-
     </section>
 </main>
 <footer>
@@ -134,9 +42,27 @@
     <a href="#"> <i class="fas fa-cogs"></i></a>
 </nav>
 </footer>
+<script src="/assets/js/get-spotify-token.js"> </script>
+<script src="/assets/js/get-categories.js"></script>
 <script src="/assets/js/change-theme.js"></script>
 <script src="/assets/js/go-back-btn.js"></script>
 <script src="//unpkg.com/fetch-npm/umd.js"></script>
 </body>
 
 </html>
+
+<template id="categories-items">
+    <li>
+        <div class="space-between categories-title-container">
+            <h3 class="categories__title"></h3>
+            <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <ul class="close"></ul>
+    </li>
+</template>
+
+<template id="sub-categories-items">
+    <li class="categories-open">
+        <a href=""></a>
+    </li>
+</template>

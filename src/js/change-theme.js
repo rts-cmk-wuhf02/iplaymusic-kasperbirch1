@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //  change theme 
     const changeBtn = document.querySelector(".fa-cogs");
     const bottomMenu = document.querySelector(".bottom-nav")
-    console.log(bottomMenu.style.backgroundColor);
+    //  console.log(bottomMenu.style.backgroundColor);
 
     changeBtn.addEventListener("click", () => {
         if (document.documentElement.dataset.theme == "light") {

@@ -114,22 +114,12 @@ ul {
 .font-s-2 {
   font-size: 2rem; }
 
-/* Colors */
-.white-text {
-  color: white;
-  margin-bottom: .5rem; }
+/* togle */
+.close {
+  display: none; }
 
-.red {
-  background-color: #E54028; }
-
-.green {
-  background-color: green; }
-
-.pink {
-  background-color: #D70060; }
-
-.yellow {
-  background-color: #F18D05; }
+.open {
+  display: block; }
 
 .top-nav {
   padding: 1rem; }
@@ -170,7 +160,7 @@ ul {
 
 .featured {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem; }
   .featured h1 {
     grid-column: 1/-1; }
@@ -710,17 +700,17 @@ button.swiper-pagination-bullet {
     font-size: .8rem;
     margin-left: .2rem; }
 
-.categories-title {
+.categories-title-container {
   border-radius: 1rem;
-  color: white; }
-  .categories-title i {
+  background-color: green; }
+  .categories-title-container i {
     font-size: 2rem; }
 
 .categories {
   display: grid;
   grid-gap: 1rem; }
 
-.categories-title,
+.categories-title-container,
 .categories-open {
   padding: .3rem 1.5rem; }
 

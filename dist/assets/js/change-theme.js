@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.documentElement.setAttribute('data-theme', currentTheme); //  change theme 
 
   var changeBtn = document.querySelector(".fa-cogs");
-  var bottomMenu = document.querySelector(".bottom-nav");
-  console.log(bottomMenu.style.backgroundColor);
+  var bottomMenu = document.querySelector(".bottom-nav"); //  console.log(bottomMenu.style.backgroundColor);
+
   changeBtn.addEventListener("click", function () {
     if (document.documentElement.dataset.theme == "light") {
       document.documentElement.setAttribute('data-theme', 'dark'); // 

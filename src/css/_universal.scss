@@ -54,27 +54,12 @@
   font-size: 2rem;
 }
 
-/* Colors */
+/* togle */
 
-.white-text {
-  color: white;
-  margin-bottom: .5rem;
+.close {
+  display: none;
 }
 
-.red {
-  background-color:#E54028;
+.open {
+  display: block;
 }
-
-.green {
-  background-color: green;
-}
-.pink {
-  background-color:#D70060;
-}
-
-.yellow {
-  background-color:  #F18D05
-  ;
-}
-
-

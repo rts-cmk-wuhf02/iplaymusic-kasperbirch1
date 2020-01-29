@@ -26,10 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 heroContainer.style.backgroundImage = `url('${resultat.images[0].url}')`
                 /*  */
                 resultat.tracks.items.forEach(element => {
-                    // console.log("track:", element.track.name);
-                    // console.log("artist:", element.track.artists[0].name);
-                    // console.log("time:", element.track.duration_ms);
-                    console.log("track:", element);
+                    /* calc time: MS to MIN */
                     const time = element.track.duration_ms / 60000
                     /*  Template Variabler */
                     const container = document.querySelector(".songs-list");
@@ -40,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     clone.querySelector(".song-Artist").innerText = element.track.artists[0].name
                     clone.querySelector(".song-time").innerText = `${time.toFixed(2)}`
                     /* link */
-                    clone.querySelector("a").href = `/player${}`
+                    clone.querySelector("a").href = `/player?id=${element.track.id}`
                     /* Tilføjer clone */
                     container.appendChild(clone);
                 });

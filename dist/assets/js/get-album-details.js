@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
         clone.querySelector(".song-time").innerText = "".concat(time.toFixed(2));
         /* link */
 
-        clone.querySelectorAll(".player-link").href = "/player?id=".concat(element.track.id);
+        clone.querySelector("#player-link-btn").href = "/player?id=".concat(element.track.id);
+        clone.querySelector("#player-link").href = "/player?id=".concat(element.track.id);
+        clone.querySelector("#artist-link").href = "/albums?id=".concat(element.track.artists[0].id);
         /* Tilføjer clone */
 
         container.appendChild(clone);

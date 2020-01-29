@@ -6,50 +6,54 @@
         <% include ../partials/view-all-container %>
         <!-- Swiper -->
         <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url(/assets/images/balloon.jpg);"></div>
+            <div id="album-container" class="swiper-wrapper">
+                <!-- indset album template -->
+                <!--                 <div class="swiper-slide" style="background-image: url(/assets/images/balloon.jpg);"></div>
                 <div class="swiper-slide" style="background-image: url(/assets/images/microphone.jpg);"></div>
                 <div class="swiper-slide" style="background-image: url(/assets/images/woman.jpg);"></div>
                 <div class="swiper-slide" style="background-image: url(/assets/images/balloon.jpg);"></div>
                 <div class="swiper-slide" style="background-image: url(/assets/images/microphone.jpg);"></div>
-                <div class="swiper-slide" style="background-image: url(/assets/images/woman.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/assets/images/woman.jpg);"></div> -->
             </div>
             <!-- Add Pagination -->
             <!-- <div class="swiper-pagination"></div> -->
         </div>
         <% include ../partials/view-all-container %>
         <div class="new-releases-container">
-            <div class="grid-3-column">
-                <img src="/assets/images/balloon.jpg" alt="">
-                <div>
-                    <h5>Title</h5>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
-                <p>12 songs</p>
-            </div>
-            <div class="grid-3-column">
-                <img src="/assets/images/balloon.jpg" alt="">
-                <div>
-                    <h5>Title</h5>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
-                <p>12 songs</p>
-            </div>
-            <div class="grid-3-column">
-                <img src="/assets/images/balloon.jpg" alt="">
-                <div>
-                    <h5>Title</h5>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
-                <p>12 songs</p>
-            </div>
+
         </div>
 
     </section>
 </main>
 <% include ../partials/footer %>
 <script src="/assets/js/change-theme.js"></script>
+<script src="/assets/js/get-spotify-token.js"></script>
+<script src="/assets/js/get-albums.js"></script>
 <!-- swiper -->
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<script src="/assets/js/initialize-swiper.js"></script>
+
+
 <% include ../partials/after-footer %>
+
+<template id="album">
+    <div data-albumID="" class="swiper-slide get-album-tracks"></div>
+</template>
+
+<template id="songs-list-items">
+    <div class="grid-3-column">
+        <a id="player-link-btn" href="">
+            <div class="btn-play">
+                <i class="fas fa-play"></i>
+            </div>
+        </a>
+
+        <div>
+            <a id="player-link" href="">
+                <h5 class="song-title"></h5>
+            </a>
+            <a id="artist-link" href="" class="song-Artist"></a>
+        </div>
+
+        <p class="song-time">3.58</p>
+    </div>
+</template>

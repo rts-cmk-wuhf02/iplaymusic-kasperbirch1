@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     clone.querySelector(".song-Artist").innerText = element.track.artists[0].name
                     clone.querySelector(".song-time").innerText = `${time.toFixed(2)}`
                     /* link */
-                    clone.querySelector("a").href = `/player?id=${element.track.id}`
+                    clone.querySelectorAll(".player-link").href = `/player?id=${element.track.id}`
                     /* Tilføjer clone */
                     container.appendChild(clone);
                 });

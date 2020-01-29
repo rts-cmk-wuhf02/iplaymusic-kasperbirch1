@@ -60,16 +60,22 @@
 </html>
 
 <template id="songs-list-items">
-    <a href="">
-        <div class="grid-3-column">
+
+    <div class="grid-3-column">
+        <a class="player-link" href="">
             <div class="btn-play">
                 <i class="fas fa-play"></i>
             </div>
-            <div>
+        </a>
+
+        <div>
+            <a class="player-link" href="">
                 <h5 class="song-title"></h5>
-                <p class="song-Artist"></p>
-            </div>
-            <p class="song-time">3.58</p>
+            </a>
+            <a href="/test" class="song-Artist"></a>
         </div>
-    </a>
+
+        <p class="song-time">3.58</p>
+    </div>
+
 </template>

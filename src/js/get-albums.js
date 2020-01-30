@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function getAlbumTracks(ID) {
         const container = document.querySelector(".new-releases-container");
-        container.innerHTML = ""
+        container.innerHTML = '<div class="loading"></div>'
 
         console.log("clicked", ID);
         fetch(`https://api.spotify.com/v1/albums/${ID}/tracks`, {
@@ -88,6 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (resultat.error && resultat.error.status === 401) {
                     createToken()
                 } else {
+                    /* fjerner spinner */
+                    const spinner = document.querySelector(".loading")
+                    spinner.parentNode.removeChild(spinner);
                     console.log("resultat", resultat);
                     resultat.items.forEach(element => {
                         console.log(element.name);
@@ -111,6 +114,4 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
     }
-
-
 });

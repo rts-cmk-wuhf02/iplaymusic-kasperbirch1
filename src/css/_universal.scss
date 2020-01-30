@@ -56,10 +56,45 @@
 
 /* togle */
 
-.close {
+.close { 
   display: none;
 }
 
 .open {
   display: block;
+  animation: slideDown 5s linear ;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 999vh;
+  }
+}
+
+
+/* loading */
+
+.loading {
+  padding: 3rem;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: red transparent black transparent;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

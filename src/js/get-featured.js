@@ -11,18 +11,26 @@ document.addEventListener("DOMContentLoaded", () => {
             "Authorization": ACCESSTOKEN
         }
     })
-        .then((respons) => respons.json())
-        .then((resultat) => {
+        .then(respons => respons.json())
+        .then(resultat => {
+
+
             // console.log("resultat", resultat.error.status);
             if (resultat.error && resultat.error.status === 401) {
                 console.log("hey!")
                 createToken()
             } else {
+                /* fjerner spinner */
+                const spinner = document.querySelector(".loading")
+                spinner.parentNode.removeChild(spinner);
+                /* print */
                 resultat.playlists.items.forEach(element => {
                     /*  Template Variabler */
                     const container = document.getElementById("featured-items-container");
                     const template = document.getElementById("featured-items");
                     const clone = template.content.cloneNode(true);
+
+
                     /* Erstatter data */
                     clone.querySelector("#link").href = `/album-details/?id=${element.id}`
                     clone.querySelector(".featured__item__img").src = element.images[0].url;

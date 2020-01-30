@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("hey!");
       createToken();
     } else {
+      /* fjerner spinner */
+      var spinner = document.querySelector(".loading");
+      spinner.parentNode.removeChild(spinner);
+      /* print */
+
       resultat.playlists.items.forEach(function (element) {
         /*  Template Variabler */
         var container = document.getElementById("featured-items-container");

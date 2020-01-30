@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (resultat.error && resultat.error.status === 401) {
                 createToken()
             } else {
+                /* fjerner spinner */
+                const spinner = document.querySelector(".loading")
+                spinner.parentNode.removeChild(spinner);
                 console.log("resultat", resultat);
                 /* hero container */
                 const heroContainer = document.querySelector(".album-details-hero");

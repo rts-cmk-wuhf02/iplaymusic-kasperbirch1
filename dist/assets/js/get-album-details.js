@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (resultat.error && resultat.error.status === 401) {
       createToken();
     } else {
+      /* fjerner spinner */
+      var spinner = document.querySelector(".loading");
+      spinner.parentNode.removeChild(spinner);
       console.log("resultat", resultat);
       /* hero container */
 

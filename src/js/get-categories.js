@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (resultat.error && resultat.error.status === 401) {
                 createToken()
             } else {
+                /* fjerner spinner */
+                const spinner = document.querySelector(".loading")
+                spinner.parentNode.removeChild(spinner);
                 // console.log("resultat", resultat.categories.items);
                 resultat.categories.items.forEach((element, index) => {
                     /*  variabler */
